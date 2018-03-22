@@ -1,0 +1,4 @@
+sceneSetups:
+- path: Assets/Scenes/First Level prototype.unity
+  isLoaded: 0
+  isActive: 0
