@@ -91,7 +91,8 @@ public class PlayerController : MonoBehaviour
 
         Vector3 midFace = transform.position + new Vector3(0, -size.y / 2 + 0.01f, 0);
 
-        //raycast (check if grounded)
+        //raycast (check if grounded)          
+        //TODO fix this thing or change to feet
         bool grounded1 = Physics.Raycast(corner1, -Vector3.up, 0.01f);
         Debug.DrawRay(corner1, -Vector3.up * 0.1f);
         bool grounded2 = Physics.Raycast(corner2, -Vector3.up, 0.01f);
@@ -120,11 +121,15 @@ public class PlayerController : MonoBehaviour
         }
         else if (other.CompareTag("Enemy"))
         {
-            print("you've run into an enemy");
+            //print("you've run into an enemy");
+            //reset the game
+            GameManager.Instance.ResetGame();
         }
         else if (other.CompareTag("Goal"))
         {
-            print("you made it");
+            //print("you made it");
+            //Increse level
+            GameManager.Instance.IncreseLevel();
         }
     }
 }
