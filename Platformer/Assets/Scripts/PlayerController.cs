@@ -1,7 +1,4 @@
-﻿using System;
-using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
@@ -108,7 +105,8 @@ public class PlayerController : MonoBehaviour
     {
         if (other.CompareTag("Coin"))
         {
-            print("collected a coin");
+           // print("collected a coin");
+            GameManager.Instance.IncreaseScore(1);
 
             // play coin sound
             CoinSound.Play();
