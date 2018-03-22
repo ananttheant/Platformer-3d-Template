@@ -10,6 +10,12 @@ public class GameManager : MonoBehaviour {
     //high score
     public int HighScore = 0;
 
+    //current level
+    public int CurrentLevel = 1;
+
+    //number of levels ( changea accordingly)
+    public int Highestlevel = 2; // in this case 2
+
     //Static instance of the game manger can be accessed from anywhere
     public static GameManager Instance;
 
@@ -38,12 +44,12 @@ public class GameManager : MonoBehaviour {
         Score += amount;
 
         //show new score
-        print("new score: " + Score);
+       // print("new score: " + Score);
 
         if (Score > HighScore)
         {
             HighScore = Score;
-            print("new High score: "+ HighScore);
+            //print("new High score: "+ HighScore);
         }
     }
 }

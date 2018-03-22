@@ -93,12 +93,17 @@ public class PlayerController : MonoBehaviour
 
         //raycast (check if grounded)
         bool grounded1 = Physics.Raycast(corner1, -Vector3.up, 0.01f);
+        Debug.DrawRay(corner1, -Vector3.up * 0.1f);
         bool grounded2 = Physics.Raycast(corner2, -Vector3.up, 0.01f);
+        Debug.DrawRay(corner2, -Vector3.up * 0.1f);
         bool grounded3 = Physics.Raycast(corner3, -Vector3.up, 0.01f);
+        Debug.DrawRay(corner3, -Vector3.up * 0.1f);
         bool grounded4 = Physics.Raycast(corner4, -Vector3.up, 0.01f);
+        Debug.DrawRay(corner4, -Vector3.up * 0.1f);
         bool midFaceCheck = Physics.Raycast(midFace, -Vector3.up, 0.01f);
+        Debug.DrawRay(midFace, -Vector3.up * 0.1f);
 
-        return(grounded1 || grounded2 || grounded3 || grounded4 || midFaceCheck);
+        return (grounded1 || grounded2 || grounded3 || grounded4 || midFaceCheck);
     }
 
     void OnTriggerEnter(Collider other)
