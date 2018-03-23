@@ -48,6 +48,15 @@ public class PlayerController : MonoBehaviour
         Vector3 NewPos = transform.position + Movement;
 
         _rb.MovePosition(NewPos);
+
+        //CHECK IF THERE'S ANY MOVEMENT (FOR MAKING THE PLAYER FACE THE MOVEMENT DIRECTION)
+        if (hAxis != 0 || vAxis != 0)
+        {
+            Vector3 Direction = new Vector3(hAxis,0,vAxis);
+
+            //option one modify the transform
+           // transform.forward = Direction;
+        }
     }
 
     void JumpHandler()
