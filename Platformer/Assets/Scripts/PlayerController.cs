@@ -122,8 +122,8 @@ public class PlayerController : MonoBehaviour
         else if (other.CompareTag("Enemy"))
         {
             //print("you've run into an enemy");
-            //reset the game
-            GameManager.Instance.ResetGame();
+            //Game over
+            GameManager.Instance.GameOver();
         }
         else if (other.CompareTag("Goal"))
         {

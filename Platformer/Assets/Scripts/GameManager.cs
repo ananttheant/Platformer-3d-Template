@@ -18,7 +18,7 @@ public class GameManager : MonoBehaviour {
     //number of levels ( changea accordingly)
     public int Highestlevel = 2; // in this case 2
 
-    HudManager hudManager;
+    HudManager _hudManager;
 
     //Static instance of the game manger can be accessed from anywhere
     public static GameManager Instance;
@@ -40,7 +40,7 @@ public class GameManager : MonoBehaviour {
 
 
             // find an object of type HudManager
-            Instance.hudManager = FindObjectOfType<HudManager>();
+            Instance._hudManager = FindObjectOfType<HudManager>();
 
             /*we have a static instance attribute to make sure the GameManager is always the same object.
             * This allows us to keep track of the high score, since the object does not change when the player resets the game.
@@ -54,7 +54,7 @@ public class GameManager : MonoBehaviour {
         DontDestroyOnLoad(gameObject);
 
         //find Hud Manager
-        hudManager = FindObjectOfType<HudManager>();
+        _hudManager = FindObjectOfType<HudManager>();
     }
     
     //increase the score
@@ -65,8 +65,8 @@ public class GameManager : MonoBehaviour {
         //show new score
         //print("new score: " + Score);
         //Update Hud 
-        Debug.Assert(hudManager != null, "hudManager = null");
-        hudManager.ResetHud();
+        Debug.Assert(_hudManager != null, "hudManager = null");
+        _hudManager.ResetHud();
 
         if (Score > HighScore)
         {
@@ -81,8 +81,8 @@ public class GameManager : MonoBehaviour {
         Score = 0;
 
         //Update Hud 
-        Debug.Assert(hudManager != null, "hudManager = null");
-        hudManager.ResetHud();
+        Debug.Assert(_hudManager != null, "hudManager = null");
+        _hudManager.ResetHud();
 
         //reset current level to 1
         CurrentLevel = 1;
@@ -105,5 +105,10 @@ public class GameManager : MonoBehaviour {
             CurrentLevel = 1;
         }
         SceneManager.LoadScene("Level"+CurrentLevel);
+    }
+
+    public void GameOver()
+    {
+        SceneManager.LoadScene("GameOver");
     }
 }
