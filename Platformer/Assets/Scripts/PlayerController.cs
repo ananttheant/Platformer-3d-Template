@@ -54,8 +54,12 @@ public class PlayerController : MonoBehaviour
         {
             Vector3 Direction = new Vector3(hAxis,0,vAxis);
 
-            //option one modify the transform
+            //option one modify the transform though its not a good idea to change the transfrom directly if it has a rigidbody unless it's kinematic 
            // transform.forward = Direction;
+
+        //so we use
+        _rb.rotation = Quaternion.LookRotation(Direction);
+
         }
     }
 

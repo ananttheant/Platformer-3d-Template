@@ -24,7 +24,9 @@ public class GameOverManager : MonoBehaviour {
    //it will send the player to level 1
     public void RestartGame()
     {
+        
         GameManager.Instance.ResetGame();
+        
         SceneManager.LoadScene("Level1");
     }
 }

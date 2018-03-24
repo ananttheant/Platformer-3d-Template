@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Debug = System.Diagnostics.Debug;
 
 
 public class HudManager : MonoBehaviour
@@ -17,7 +18,7 @@ public class HudManager : MonoBehaviour
 
     public void ResetHud()
     {
-        ScoreLable.text = "Score: " + GameManager.Instance.Score;
+        if (ScoreLable != null) ScoreLable.text = "Score: " + GameManager.Instance.Score;
     }
     
 	
