@@ -32,8 +32,8 @@ sysinfo.txt
 # Builds
 *.apk
 *.unitypackage
-Roll_ball/Library
-Roll_ball/Temp
-Roll_ball/Builds
+Platformer/Library
+Platformer/Temp
+Platformer/Builds
 
-Platformer/Temp/UnityLockfile
+
