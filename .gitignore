@@ -33,8 +33,8 @@ sysinfo.txt
 *.apk
 *.unitypackage
 
-Platformer/Library
-Platformer/Temp
-Platformer/Builds
+Platformer-3d-Template/Platformer/Library
+Platformer-3d-Template/Platformer/Temp
+Platformer-3d-Template/Platformer/Builds
 
 
