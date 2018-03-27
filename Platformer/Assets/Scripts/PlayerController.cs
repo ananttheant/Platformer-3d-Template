@@ -28,7 +28,7 @@ public class PlayerController : MonoBehaviour
 	    _rb = GetComponent<Rigidbody>();
 	    col = GetComponent<Collider>();
 
-        //get size of the play
+        //get size of the player
 	    size = col.bounds.size;
 
         //set the camera position initially
