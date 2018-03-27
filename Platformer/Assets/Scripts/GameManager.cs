@@ -71,7 +71,7 @@ public class GameManager : MonoBehaviour {
         if (Score > HighScore)
         {
             HighScore = Score;
-            print("new High score: "+ HighScore);
+            //print("new High score: "+ HighScore);
         }
     }
 
