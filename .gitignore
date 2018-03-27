@@ -36,5 +36,5 @@ sysinfo.txt
 Platformer/Library
 Platformer/Temp
 Platformer/Builds
-
+*.meta
 
