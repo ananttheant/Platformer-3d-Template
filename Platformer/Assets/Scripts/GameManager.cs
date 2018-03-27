@@ -15,7 +15,7 @@ public class GameManager : MonoBehaviour {
     //current level
     public int CurrentLevel = 1;
 
-    //number of levels ( changea accordingly)
+    //number of levels ( change accordingly)
     public int Highestlevel = 2; // in this case 2
 
     HudManager _hudManager;
